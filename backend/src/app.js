@@ -10,7 +10,7 @@ import applicationRouter from "./Routers/applicationRouter.js"
 const app = express()
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [process.env.FRONT_END],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
